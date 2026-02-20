@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Threads | Premium Fashion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">ROYAL THREADS</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="cart" onclick="toggleCart()">
+        Cart (<span id="cart-count">0</span>)
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Luxury Redefined</h1>
+        <p>Premium Craftsmanship for Modern Gentlemen</p>
+        <button onclick="scrollToProducts()">Explore Collection</button>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+    <h2 class="section-title">Our Collection</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1593032465174-0b9c1c0f2a1d?auto=format&fit=crop&w=800&q=80">
+            <h3>Premium Suit</h3>
+            <p class="price">₹7,999</p>
+            <button onclick="addToCart('Premium Suit',7999)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520974735194-0c6d4c5a1f1f?auto=format&fit=crop&w=800&q=80">
+            <h3>Formal Shirt</h3>
+            <p class="price">₹2,499</p>
+            <button onclick="addToCart('Formal Shirt',2499)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=800&q=80">
+            <h3>Elegant Blazer</h3>
+            <p class="price">₹5,499</p>
+            <button onclick="addToCart('Elegant Blazer',5499)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>
+        Royal Threads represents sophistication and craftsmanship.
+        Inspired by heritage fashion brands, we create timeless elegance
+        blended with modern tailoring.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <h4>Total: ₹<span id="total">0</span></h4>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<footer>
+    © 2026 Royal Threads. All Rights Reserved.
+</footer>
+
+<script src="test.js"></script>
+
+</body>
+</html>
